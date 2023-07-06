@@ -1,0 +1,12 @@
+.title {
+    font-size: xx-large;
+  }
+  
+  .task {
+    width: auto;
+    font-size: large;
+  }
+  
+  .taskIcon {
+    height: 17px;
+  }
