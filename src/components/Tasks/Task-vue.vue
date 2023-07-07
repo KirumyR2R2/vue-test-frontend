@@ -1,6 +1,4 @@
 <template>
-  <p>{{ $store.state.formData }}</p>
-  <p>{{ $store.state.actionData }}</p>
   <div className="h-screen mx-10">
     <div className="mx-auto p-2">
       <button
@@ -214,12 +212,12 @@
       </form>
     </div>
     <div>
-      <div v-if="taskError && taskLoading && usersLoading && usersError">
-        <p v-if="taskError && usersError">
+      <div v-if="taskError || taskLoading || usersLoading || usersError">
+        <p v-if="taskError || usersError">
           Что-то пошло не так... {{ taskError && taskError }}
           {{ usersError && usersError }}
         </p>
-        <p v-if="taskLoading && usersLoading">Загрузка...</p>
+        <p v-if="taskLoading || usersLoading">Загрузка...</p>
       </div>
       <div
         v-else
